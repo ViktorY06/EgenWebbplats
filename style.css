@@ -19,6 +19,7 @@ header{
 nav{
     grid-column: 1;
     grid-row: 2;
+    display: grid;
 }
 
 nav > ul{
@@ -29,6 +30,10 @@ nav > ul{
 
 nav a{
     text-decoration: none; /*tar bort undertexten under länkarna i navigationsmenyn*/
+}
+
+a:hover{ /*länkfärg vid hover*/
+    color:rgb(189, 118, 255);
 }
 
 nav li{
@@ -46,3 +51,10 @@ footer{ /*sidfotens placering*/
     text-align: center;
 }
 
+header img{
+    width: 10%;
+}
+
+header{
+    overflow: auto;
+}
