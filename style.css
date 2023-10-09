@@ -1,0 +1,48 @@
+body{ /*grid container*/
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto 50px;
+    grid-template-areas: 
+    "header header header header"
+    "nav nav nav nav"
+    "main main main main"
+    "footer footer footer footer";
+    background-color: rgb(207, 207, 207); /*bakgrundsfärg i hela dokumentet*/
+    color: black; /*textfärg i hela dokumentet*/
+} 
+
+header{
+    grid-column: 1 /span 4;
+    grid-row: 1;
+}
+
+nav{
+    grid-column: 1;
+    grid-row: 2;
+}
+
+nav > ul{
+    list-style-type: none; /*tar bort pricken innan länkarna*/
+    margin: 0;
+    padding: 0;
+}
+
+nav a{
+    text-decoration: none; /*tar bort undertexten under länkarna i navigationsmenyn*/
+}
+
+nav li{
+    text-align: center;
+}
+
+main{
+    grid-column: 1 / span 4;
+    grid-row: 3;
+}
+
+footer{ /*sidfotens placering*/
+    grid-column: 2/span 2;
+    grid-row: 4;
+    text-align: center;
+}
+
