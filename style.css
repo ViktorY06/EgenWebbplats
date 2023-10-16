@@ -1,28 +1,54 @@
 body{ /*grid container*/
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: auto auto auto 50px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto;
     grid-template-areas: 
-    "header header header header"
-    "nav nav nav nav"
-    "main main main main"
-    "footer footer footer footer";
+    "header nav nav"
+    "main main main"
+    "footer footer footer";
     background-color: rgb(207, 207, 207); /*bakgrundsfärg i hela dokumentet*/
     color: black; /*textfärg i hela dokumentet*/
 } 
 
 header{
-    grid-column: 1 /span 4;
+    grid-column: 1;
     grid-row: 1;
 }
 
 nav{
-    grid-column: 1;
-    grid-row: 2;
+    grid-column: 2 /span 2;
+    grid-row: 1;
     display: grid;
 }
 
-nav > ul{
+li:nth-child(1){
+    display: grid;
+    grid-column: 1;
+    width: 1fr;
+}
+
+li:nth-child(2){
+    display: grid;
+    grid-column: 2;
+    width:1fr;
+}
+
+li:nth-child(3){
+    display: grid;
+    grid-column: 3;
+    width: auto;
+}
+
+ul{
+    display:grid;
+    grid-column: 1 /span 3;
+}
+
+nav li{
+    grid-column: 2;
+}
+
+nav ul{
     list-style-type: none; /*tar bort pricken innan länkarna*/
     margin: 0;
     padding: 0;
@@ -36,25 +62,15 @@ a:hover{ /*länkfärg vid hover*/
     color:rgb(189, 118, 255);
 }
 
-nav li{
-    text-align: center;
-}
-
 main{
-    grid-column: 1 / span 4;
-    grid-row: 3;
+    grid-column: 1 / span 3;
+    grid-row: 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
 footer{ /*sidfotens placering*/
-    grid-column: 2/span 2;
-    grid-row: 4;
+    grid-column: 1 / span 3;
+    grid-row: 3;
     text-align: center;
-}
-
-header img{
-    width: 10%;
-}
-
-header{
-    overflow: auto;
 }
