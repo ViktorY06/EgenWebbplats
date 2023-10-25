@@ -10,8 +10,8 @@
 }
 
 body{
-    background-color: rgb(34, 34, 59); /*bakgrundsfärg i hela dokumentet*/
-    color: rgb(242, 233, 228); /*textfärg i hela dokumentet*/
+    background-color: rgb(240, 235, 216); /*bakgrundsfärg i hela dokumentet*/
+    color: rgb(13, 19, 33); /*textfärg i hela dokumentet*/
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     margin:0;
 } 
@@ -21,7 +21,7 @@ p{
 }
 
 header, nav, footer{
-    background-color:rgb(79, 74, 69);
+    background-color:rgb(29, 45, 68);
 }
 
 header{
@@ -48,7 +48,7 @@ ul{
 }
 
 li{
-    border:solid 2px rgb(242, 233, 228);
+    border:solid 2px rgb(240, 235, 216);
     width:12em;
     height: 3em;
     margin:auto;
@@ -82,28 +82,35 @@ nav a{
     font-weight:900;
 }
 
-a{
+a:link, a:visited{
     text-decoration: none;
-    color: orangered;
+    color: rgb(29,45,68);
+    background-color: rgb(116,140,171);
+}
+
+a:hover{
+    text-decoration: none;
+    color: rgb(13,19,33);
+    background-color: rgb(62,92,118);
 }
 
 nav a:link{
     color:rgb(246, 241, 238);
-    background-color:rgb(0, 0, 0);
+    background-color:rgb(29, 45, 68);
 }
 
 nav a:visited{
     color:rgb(246, 241, 238);
-    background-color:rgb(0, 0, 0);
+    background-color:rgb(29, 45, 68);
 }
 
 nav a:hover{ /*länkfärg vid hover*/
     color:rgb(246, 241, 238);
-    background-color:rgb(56, 56, 56);
+    background-color:rgb(13,19,33);
 }
 
-nav a:active, a:focus{
-    background-color:rgb(0, 0, 0);
+nav a:active{
+    background-color:rgb(29, 45, 68);
 }
 
 main{
@@ -124,6 +131,7 @@ footer{ /*sidfotens placering*/
     grid-row: 3;
     text-align:center;
     margin-top: auto;
+    color:rgb(116,140,171)
 }
 
 h1{
@@ -131,6 +139,7 @@ h1{
     font-size: 5ex;
     margin-top:auto;
     margin-bottom:auto;
+    color:rgb(240,235,216)
 }
 
 .katte{
@@ -143,16 +152,17 @@ table{
 }
 
 td{
-    border:solid rgb(246, 241, 238) 2px;
+    border:solid rgb(13,19,33) 2px;
     padding:7px;
+    color:rgb(255, 255, 255)
 }
 
 tr:nth-child(even){
-    background-color:rgb(79, 74, 69);
+    background-color:rgb(62,92,118);
 }
 
 tr:nth-child(odd){
-    background-color:rgb(237, 125, 49);
+    background-color:rgb(116,140,171);
 }
 
 .TextArbete{
@@ -171,4 +181,8 @@ section:first-of-type{
 
 section:last-of-type{
     grid-column: 2;
+}
+
+img{
+    margin-top:8px;
 }
