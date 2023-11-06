@@ -1,34 +1,37 @@
 .gridcontainer{ /*grid container*/
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 80px auto auto;
-    grid-template-areas: 
+    display: grid; /*bestämmer att grid används för att skapa boxarna*/
+    grid-template-columns: 1fr 1fr 1fr; /*specificerar 3 kolumner inom gridsystemet*/
+    grid-template-rows: 80px auto auto; /*specificerar 3 rader inom gridsystemet*/
+    grid-template-areas: /*specificerar namn på de olika gridrutorna*/
     "header nav nav"
     "main main main"
     "footer footer footer";
-    min-height:100vh;
+    min-height:100vh; /*bestämmer minimihöjden på sidan för att placera footer på botten*/
 }
 
 body{
-    background-color: rgb(240, 235, 216); /*bakgrundsfärg i hela dokumentet*/
-    color: rgb(13, 19, 33); /*textfärg i hela dokumentet*/
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    margin:0;
+    background-color: rgb(240, 235, 216); /*bakgrundsfärg på hemsidan*/
+    color: rgb(13, 19, 33); /*textfärg på hemsidan*/
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; /*font på hemsidan*/
+    margin:0; /*tar bort marginen runt dokumentet för att bakgrundsfärgerna ska fylla ut hela sidan*/
 } 
 
 p{
-    font-size: 1.15em;
+    font-size: 1.15em; /*gör texten i paragraferna större*/
+}
+
+a{
+    text-decoration:none; /*tar bort understrykningen under länkar*/
 }
 
 header, nav, footer{
-    background-color:rgb(29, 45, 68);
+    background-color:rgb(29, 45, 68); /*bakgrundsfärg i header, nav, footer*/
 }
 
 header{
-    display:grid;
     grid-column: 1;
     grid-row: 1;
-    padding-left: 8px;
+    padding-left: 16px;
     padding-top: 8px;
     padding-bottom: 8px;
 }
@@ -37,21 +40,18 @@ nav{
     grid-column: 2 /span 2;
     grid-row: 1;
     display: grid;
-    padding-right: 8px;
-    padding-top: 8px;
 }
 
-ul{
-    grid-column: 1;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+ul{ /*tagg för att länka till ul i html dokumenten*/
+    display: grid; /*bestämmer att grid används för att skapa boxarna*/
+    grid-template-columns: 1fr 1fr 1fr; /*specificerar 3 rutor i gridsystemet inom ul*/
 }
 
 li{
-    border:solid 2px rgb(240, 235, 216);
-    width:12em;
-    height: 3em;
-    margin:auto;
+    border:solid 2px rgb(240, 235, 216); /*border runt den globala menyn*/
+    width:12em; /*bestämmer bredden på knapparna i menyn*/
+    height: 3em; /*bestämmer höjden på knapparna i menyn*/
+    margin:auto; /*centrerar knapparna inom varje gridruta i ul*/
 }
 
 li:nth-child(1){
@@ -69,61 +69,60 @@ li:nth-child(3){
     grid-column: 3;
 }
 
+a:link, a:visited{ /*länkutseende vanliga länkar*/
+    color: rgb(29,45,68);
+    background-color: rgb(116,140,171);
+}
+
+a:hover{  /*länkutseende vanliga länkar*/
+    color: rgb(13,19,33);
+    background-color: rgb(62,92,118);
+}
+
 nav ul{
-    list-style-type: none; /*tar bort pricken innan länkarna*/
-    margin: 0;
+    list-style-type: none; /*tar bort pricken innan länkarna i listan*/
+    margin: 0; 
     padding: 0;
 }
 
 nav a{
     text-align:center;
-    vertical-align:middle;
     line-height:3em;
     font-weight:900;
 }
 
-a:link, a:visited{
-    text-decoration: none;
-    color: rgb(29,45,68);
-    background-color: rgb(116,140,171);
-}
-
-a:hover{
-    text-decoration: none;
-    color: rgb(13,19,33);
-    background-color: rgb(62,92,118);
-}
-
-nav a:link{
+nav a:link{ /*länkfärg och bakgrundsfärg vid link*/
     color:rgb(246, 241, 238);
     background-color:rgb(29, 45, 68);
 }
 
-nav a:visited{
+nav a:visited{ /*länkfärg och bakgrundsfärg vid visited*/
     color:rgb(246, 241, 238);
     background-color:rgb(29, 45, 68);
 }
 
-nav a:hover{ /*länkfärg vid hover*/
+nav a:hover{ /*länkfärg och bakgrundsfärg vid hover*/
     color:rgb(246, 241, 238);
     background-color:rgb(13,19,33);
 }
 
-nav a:active{
+nav a:active{ /*länkfärg och bakgrundsfärg vid active*/
+    color:rgb(246, 241, 238);
     background-color:rgb(29, 45, 68);
 }
 
 main{
-    grid-column: 1 / span 3;
-    grid-row: 2;
+    grid-column: 1 / span 3; /*bestämmer mains position och utrymme i gridsystemet*/
+    grid-row: 2; /*bestämmer mains position i gridsystemet*/
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 1fr 1fr; /*delar upp main i 2 lika stora delar*/
     margin-left: 8px;
     margin-right: 8px;
 }
 
-section:nth-child(2){
+div{
     margin-left: 8px;
+    grid-column: 2;
 }
 
 footer{ /*sidfotens placering*/
@@ -140,10 +139,6 @@ h1{
     margin-top:auto;
     margin-bottom:auto;
     color:rgb(240,235,216)
-}
-
-.katte{
-    width:100%;
 }
 
 table{
@@ -165,24 +160,13 @@ tr:nth-child(odd){
     background-color:rgb(116,140,171);
 }
 
-.TextArbete{
-    grid-column:1;
-}
-
-.fotboll{
-    width:100%;
-}
-
 section:first-of-type{
     grid-column: 1;
     margin-left: 10%;
     margin-right: 10%;
 }
 
-section:last-of-type{
-    grid-column: 2;
-}
-
 img{
     margin-top:8px;
+    width:100%;
 }
