@@ -12,7 +12,7 @@
 body{
     background-color: rgb(240, 235, 216); /*bakgrundsfärg på hemsidan*/
     color: rgb(13, 19, 33); /*textfärg på hemsidan*/
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; /*font på hemsidan*/
+    font-family:'Times New Roman', Times, serif; /*font på hemsidan*/
     margin:0; /*tar bort marginen runt dokumentet för att bakgrundsfärgerna ska fylla ut hela sidan*/
 } 
 
@@ -29,9 +29,9 @@ header, nav, footer{
 }
 
 header{
-    grid-column: 1;
-    grid-row: 1;
-    padding-left: 16px;
+    grid-column: 1; /*bestämmer headerns position på hemsidan*/
+    grid-row: 1; /*bestämmer headerns position på hemsidan*/
+    padding-left: 16px; 
     padding-top: 8px;
     padding-bottom: 8px;
 }
@@ -52,19 +52,20 @@ li{
     width:12em; /*bestämmer bredden på knapparna i menyn*/
     height: 3em; /*bestämmer höjden på knapparna i menyn*/
     margin:auto; /*centrerar knapparna inom varje gridruta i ul*/
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; /*bestämmer font i menyn*/
 }
 
-li:nth-child(1){
+li:nth-child(1){ /*första listelementets position i nav*/
     display: grid;
     grid-column: 1;
 }
 
-li:nth-child(2){
+li:nth-child(2){ /*andra listelementets position i nav*/
     display: grid;
     grid-column: 2;
 }
 
-li:nth-child(3){
+li:nth-child(3){ /*tredje listelementets position i nav*/
     display: grid;
     grid-column: 3;
 }
@@ -85,10 +86,10 @@ nav ul{
     padding: 0;
 }
 
-nav a{
-    text-align:center;
-    line-height:3em;
-    font-weight:900;
+nav a{ /*text i nav*/
+    text-align:center; /*bestämmer textens position*/
+    line-height:3em; /*placerar texten i mitten vertikalt*/
+    font-weight:900; /*textens tjocklek*/
 }
 
 nav a:link{ /*länkfärg och bakgrundsfärg vid link*/
@@ -120,8 +121,8 @@ main{
     margin-right: 8px;
 }
 
-div{
-    margin-left: 8px;
+div{ /*placerar alla bilder i den högra kolumnen med margin 8px till vänster*/
+    margin-left: 8px; 
     grid-column: 2;
 }
 
@@ -134,7 +135,7 @@ footer{ /*sidfotens placering*/
 }
 
 h1{
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /*huvudtitelns font*/
     font-size: 5ex;
     margin-top:auto;
     margin-bottom:auto;
@@ -142,31 +143,31 @@ h1{
 }
 
 table{
-    width:100%;
+    width:100%; /*gör att tabellen tar upp hela kolumnen*/
     border-collapse:collapse;
 }
 
-td{
-    border:solid rgb(13,19,33) 2px;
-    padding:7px;
-    color:rgb(255, 255, 255)
+td{ 
+    border:solid rgb(13,19,33) 2px; /*bestämmer tabellens kanter*/
+    padding:7px; /*avstånd från tabelldatan till bordern*/
+    color:rgb(240,235,216) /*textfärg i tabellen*/
 }
 
-tr:nth-child(even){
+tr:nth-child(even){ /*zebra striping till tabellen*/
     background-color:rgb(62,92,118);
 }
 
-tr:nth-child(odd){
+tr:nth-child(odd){ /*zebra striping till tabellen*/
     background-color:rgb(116,140,171);
 }
 
-section:first-of-type{
+section:first-of-type{ /*gör att första sectionen med text har margin på båda sidorna */
     grid-column: 1;
     margin-left: 10%;
     margin-right: 10%;
 }
 
-img{
-    margin-top:8px;
-    width:100%;
+img{ 
+    margin-top:8px; /*skapar mellanrum mellan nav baren och bilden*/
+    width:100%; /*bestämmer en bilds bredd så att den inte tar upp mer än sin kolumn*/
 }
